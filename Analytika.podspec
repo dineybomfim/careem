@@ -1,4 +1,4 @@
-Pod::s.new do |s|
+Pod::Spec.new do |s|
   s.name         = 'Analytika'
   s.version      = '0.69.0'
   s.summary      = 'Analytika SDK'
