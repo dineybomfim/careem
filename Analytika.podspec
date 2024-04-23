@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = 'Analytika'
   s.version      = '0.69.0'
   s.summary      = 'Analytika SDK'
-  s.homepage     = 'https://github.com/careem/analytika'
+  s.homepage     = 'https://github.com/dineybomfim/careem/tree/main/Analytika.xcframework'
   s.authors      = { 'Team Cerberus - Careem' => 'captain-cerberus@careem.com' }
   s.license      = { :type => 'BSD-3-Clause', :file => 'LICENSE' }
   s.source       = { :git => 'https://github.com/dineybomfim/careem.git', :tag => "#{s.name}-v#{s.version}", :submodules => true }
