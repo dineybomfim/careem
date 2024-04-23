@@ -1,0 +1,4 @@
+framework module OneClickCheckout {
+  header "OneClickCheckout-Swift.h"
+  requires objc
+}
