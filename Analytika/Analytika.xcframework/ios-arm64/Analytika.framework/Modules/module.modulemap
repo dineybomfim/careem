@@ -1,0 +1,8 @@
+framework module Analytika {
+    umbrella header "Analytika.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

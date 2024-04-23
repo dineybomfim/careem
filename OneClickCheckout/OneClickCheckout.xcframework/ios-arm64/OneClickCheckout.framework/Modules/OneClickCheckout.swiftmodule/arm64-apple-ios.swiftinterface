@@ -1,0 +1,104 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OneClickCheckout
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import CryptoKit
+import Foundation
+import SafariServices
+import Swift
+import SwiftUI
+import UIKit.UIColor
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers public class OneClickUtils {
+  public static var isCareemAppInstalled: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class AuthenticateHandler {
+  public static let sharedInstance: OneClickCheckout.AuthenticateHandler
+  @discardableResult
+  final public func resumeAuthorizationFlow(url: Foundation.URL) -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class OneClickPaymentProcessorBuilder {
+  final public class func build(viewController: UIKit.UIViewController, clientId: Swift.String, redirectUri: Swift.String, environment: OneClickCheckout.Environment) -> any OneClickCheckout.OneClickPaymentProcessorProtocol
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class OneClickButtonView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var isEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension OneClickCheckout.OneClickButtonView {
+  @_Concurrency.MainActor(unsafe) public func configure(viewController: UIKit.UIViewController, clientId: Swift.String, redirectUri: Swift.String, buttonStyle: OneClickCheckout.CareemButtonStyle = CareemButtonStyle(), environment: OneClickCheckout.Environment, fetchInvoiceCallback: @escaping ((@escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void) -> Swift.Void), onComplete: @escaping ((OneClickCheckout.TransactionStatus) -> Swift.Void))
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+}
+public enum ButtonDescription : Swift.String {
+  case light
+  case dark
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CareemButtonStyle {
+  public init(style: OneClickCheckout.CareemStyle = .midnightBlue, buttonDescription: OneClickCheckout.ButtonDescription = .dark, cornerRadius: CoreFoundation.CGFloat = 28)
+}
+extension OneClickCheckout.CareemButtonStyle {
+  public init(dict: Foundation.NSDictionary)
+}
+public enum CareemStyle : Swift.String {
+  case green
+  case white
+  case midnightBlue
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol OneClickPaymentProcessorProtocol {
+  func processPayment(invoiceId: Swift.String, onComplete: @escaping ((OneClickCheckout.TransactionStatus) -> Swift.Void))
+}
+public enum Environment : Swift.String, Swift.Equatable {
+  case staging
+  case production
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TransactionStatus : Swift.Equatable {
+  case success
+  case alreadyPaid
+  case failed
+  case cancelled
+  case invalidInvoiceId(Swift.String)
+  public static func == (lhs: OneClickCheckout.TransactionStatus, rhs: OneClickCheckout.TransactionStatus) -> Swift.Bool
+}
+extension OneClickCheckout.TransactionStatus {
+  public var value: Swift.String {
+    get
+  }
+}
+extension OneClickCheckout.Environment : Swift.Hashable {}
+extension OneClickCheckout.Environment : Swift.RawRepresentable {}
+extension OneClickCheckout.ButtonDescription : Swift.Equatable {}
+extension OneClickCheckout.ButtonDescription : Swift.Hashable {}
+extension OneClickCheckout.ButtonDescription : Swift.RawRepresentable {}
+extension OneClickCheckout.CareemStyle : Swift.Equatable {}
+extension OneClickCheckout.CareemStyle : Swift.Hashable {}
+extension OneClickCheckout.CareemStyle : Swift.RawRepresentable {}
