@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency 'Analytika'
   s.ios.vendored_frameworks = 'OneClickCheckout.xcframework'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
