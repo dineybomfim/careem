@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'OneClickCheckout'
-  s.version      = '1.4.1'
+  s.version      = '1.4.2'
   s.summary      = 'Careem OneClickCheckout framework for payment'
   s.description  = 'Careem OneClickCheckout framework for payment'
   s.homepage     = 'https://careem.com'
