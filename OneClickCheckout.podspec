@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = 'OneClickCheckout'
   s.version      = '1.4.2'
-  s.summary      = 'Careem OneClickCheckout framework for payment'
-  s.description  = 'Careem OneClickCheckout framework for payment'
-  s.homepage     = 'https://careem.com'
-  s.authors      = { 'Careem' => 'careemdev@careem.com' }
+  s.summary      = 'OneClickCheckout framework for payment'
+  s.description  = 'OneClickCheckout framework for payment'
+  s.homepage     = 'https://github.com/dineybomfim/careem.git'
+  s.authors      = { 'OneClickCheckout' => 'oneclickcheckout@oneclickcheckout.com' }
   s.license      = { :type => 'BSD-3-Clause', :file => 'LICENSE' }
   s.source       = { :git => 'https://github.com/dineybomfim/careem.git', :tag => "#{s.name}-v#{s.version}" }
   s.user_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }

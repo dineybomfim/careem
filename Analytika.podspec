@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = 'Analytika SDK'
   s.description  = 'Analytika SDK'
   s.homepage     = 'https://github.com/dineybomfim/careem.git'
-  s.authors      = { 'Team Cerberus - Careem' => 'captain-cerberus@careem.com' }
+  s.authors      = { 'Analytika SDK' => 'qnqlytika@analytika.com' }
   s.license      = { :type => 'BSD-3-Clause', :file => 'LICENSE' }
   s.source       = { :git => 'https://github.com/dineybomfim/careem.git', :tag => "#{s.name}-v#{s.version}" }
   s.user_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }
